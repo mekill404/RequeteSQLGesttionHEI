@@ -46,9 +46,9 @@ INSERT INTO Leave VALUES (DEFAULT, '2025-11-14', '2025-11-20', 1), (DEFAULT, '20
 
 
 --Afficher l’id, first_name, last_name des employés qui n’ont pas d’équipe.
--- SELECT id, first_name, last_name
--- FROM Employe
--- WHERE id_team IS NULL;
+SELECT id, first_name, last_name
+FROM Employe
+WHERE id_team IS NULL;
 
 --Afficher l’id, first_name, last_name des employés qui n’ont jamais pris de congé de leur vie.
 -- SELECT e.id, e.first_name, e.last_name
