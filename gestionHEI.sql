@@ -1,0 +1,32 @@
+CREATE DATABASE "gestionHEI"
+  WITH
+  OWNER = postgres
+  ENCODING = 'UTF8'
+  LOCALE_PROVIDER = 'libc'
+  CONNECTION LIMIT = -1
+  IS_TEMPLATE = False;
+
+COMMENT ON DATABASE "gestionHEI"
+  IS 'Exercice pour la rentrer';
+
+CREATE TABLE TEAM
+(
+ SERIAL id PRIMARY KEY,
+ VARCHAR(100) name NOT NULL
+);
+CREATE TABLE Employe
+(
+ SERIAL id PRIMARY KEY,
+ VARCHAR(100) first_name NOT NULL,
+ VARCHAR(100) last_name NOT NULL,
+ VARCHAR(50) contract_type NOT NULL,
+ INTEGER salary NOT NULL,
+ id_team INTEGER REFERENCES TEAM(id)
+);
+CREATE TABLE Leave
+(
+  SERIAL id PRIMARY KEY,
+  DATE start_date NOT NULL,
+  DATE end_date NOT NULL,
+  id_employe INTEGER REFERENCES Employe(id)
+);
