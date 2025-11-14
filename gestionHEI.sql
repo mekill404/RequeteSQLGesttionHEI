@@ -1,3 +1,11 @@
+/******************************************
+* Author: mekill404
+* STD: 24186
+* Date: 2024-06-10
+*
+* gestionHEI.sql
+* Objectif: Rappel du cours du donnée 1
+*******************************************/
 CREATE DATABASE "gestionHEI"
   WITH
   OWNER = postgres
